@@ -1,0 +1,143 @@
+{
+	"$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.json",
+	"app_specific_configuration_path": "$Env:USERPROFILE/applications.yaml",
+	"window_hiding_behaviour": "Cloak",
+	"cross_monitor_move_behaviour": "Insert",
+	"default_workspace_padding": 4,
+	"default_container_padding": 4,
+	"focus_follows_mouse": "Komorebi",
+	"mouse_follows_focus": false,
+	"transparency": false,
+	"transparency_alpha": 240,
+	"animation": {
+		"enabled": true,
+		"duration": 400,
+		"style": "EaseOutBack",
+		"fps": 120
+	},
+	"border": false,
+	"border_width": 0,
+	"border_offset": 0,
+	"stackbar": {
+		"mode": "Never"
+	},
+	"ignore_rules": [
+		{
+			"kind": "Exe",
+			"id": "OneDrive.exe",
+			"matching_strategy": "Equals"
+		},
+		{
+			"kind": "Class",
+			"id": "TConnectionForm",
+			"matching_strategy": "Equals"
+		},
+		{
+			"kind": "Class",
+			"id": "ZPPTMainFrmWndClassEx",
+			"matching_strategy": "Equals"
+		},
+		{
+			"kind": "Class",
+			"id": "ZPSettingWndClass",
+			"matching_strategy": "Equals"
+		},
+		{
+			"kind": "Class",
+			"id": "MozillaDialogClass",
+			"matching_strategy": "Equals"
+		},
+		{
+			"kind": "Exe",
+			"id": "laragon.exe",
+			"matching_strategy": "Equals"
+		},
+		{
+			"kind": "Exe",
+			"id": "dota2.exe",
+			"matching_strategy": "Equals"
+		},
+		{
+			"kind": "Exe",
+			"id": "FortiClient.exe",
+			"matching_strategy": "Equals"
+		}
+	],
+	"monitors": [
+		{
+			"workspaces": [
+				{
+					"name": "1",
+					"layout": "BSP",
+					"workspace_rules": [
+						{
+							"kind": "Exe",
+							"id": "Telegram.exe",
+							"matching_strategy": "Equals"
+						}
+					]
+				},
+				{
+					"name": "2",
+					"layout": "BSP",
+					"workspace_rules": [
+						{
+							"kind": "Exe",
+							"id": "Discord.exe",
+							"matching_strategy": "Equals"
+						}
+					]
+				},
+				{
+					"name": "3",
+					"layout": "BSP"
+				},
+				{
+					"name": "4",
+					"layout": "BSP"
+				}
+			]
+		},
+		{
+			"workspaces": [
+				{
+					"name": "5",
+					"layout": "BSP",
+					"workspace_rules": [
+						{
+							"kind": "Exe",
+							"id": "Code.exe",
+							"matching_strategy": "Equals"
+						}
+					]
+				},
+				{
+					"name": "6",
+					"layout": "BSP",
+					"workspace_rules": [
+						{
+							"kind": "Exe",
+							"id": "navicat.exe",
+							"matching_strategy": "Equals"
+						}
+					]
+				},
+				{
+					"name": "7",
+					"layout": "BSP"
+				},
+				{
+					"name": "8",
+					"layout": "BSP",
+					"workspace_rules": [
+						{
+							"kind": "Exe",
+							"id": "Zoom.exe",
+							"matching_strategy": "Equals"
+						}
+					]
+				}
+			]
+		}
+	]
+}
