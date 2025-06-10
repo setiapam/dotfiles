@@ -84,7 +84,7 @@
         (label :class "keys-alt" :xalign 1 :text "Super + 1-9"))
       (box :orientation "h" :space-evenly "true"
         (label :class "keys" :xalign 0 :text "Rotate workspace")
-        (label :class "keys-alt" :xalign 1 :text "Ctrl + Tab"))
+        (label :class "keys-alt" :xalign 1 :text "Ctrl + Shift + Tab"))
       (box :orientation "h" :space-evenly "true"
         (label :class "keys" :xalign 0 :text "")
         (label :class "keys-alt" :xalign 1 :text ""))
