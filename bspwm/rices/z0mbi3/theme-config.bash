@@ -83,12 +83,12 @@ rofi_active="$green"
 rofi_urgent="$red"
 
 # Screenlocker
-sl_bg="${bg:1}"
-sl_fg="${fg:1}"
-sl_ring="${bg:1}"
-sl_wrong="${red:1}"
-sl_date="${fg:1}"
-sl_verify="${green:1}"
+sl_bg="${bg}"
+sl_fg="${fg}"
+sl_ring="${bg}"
+sl_wrong="${red}"
+sl_date="${fg}"
+sl_verify="${green}"
 
 # Gtk theme
 gtk_theme="Decayce-zk"
@@ -103,7 +103,7 @@ geany_theme="z0mbi3-Decay"
 # - CustomImage	(Sets a specific image as wallpaper)
 # - CustomAnimated (Set an animated wallpaper. "mp4, mkv, gif")
 # - Slideshow (Change randomly every 15 minutes your wallpaper from Walls rice directory)
-ENGINE="CustomImage"
+ENGINE="Theme"
 CUSTOM_DIR="/path/to/dir"
-CUSTOM_WALL="/home/murphi/etc/Nextcloud-Linux/Personal/SSD/wallpaper/a_forest_of_trees_with_fog.jpg"
+CUSTOM_WALL="/path/to/image"
 CUSTOM_ANIMATED="$HOME/.config/bspwm/src/assets/animated_wall.mp4"

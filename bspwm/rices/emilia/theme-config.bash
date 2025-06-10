@@ -35,7 +35,7 @@ BOTTOM_PADDING="1"
 LEFT_PADDING="1"
 RIGHT_PADDING="1"
 NORMAL_BC="#414868"		# Normal border color
-FOCUSED_BC="#bb9af7"	# Focused border color
+FOCUSED_BC="#62A0EA"	# Focused border color
 
 # Terminal font & size
 term_font_size="10"
@@ -83,12 +83,12 @@ rofi_active="$green"
 rofi_urgent="$red"
 
 # Screenlocker
-sl_bg="${bg:1}"
-sl_fg="${fg:1}"
-sl_ring="${black:1}"
-sl_wrong="${red:1}"
-sl_date="${fg:1}"
-sl_verify="${green:1}"
+sl_bg="${bg}"
+sl_fg="${fg}"
+sl_ring="${black}"
+sl_wrong="${red}"
+sl_date="${fg}"
+sl_verify="${green}"
 
 # Gtk theme
 gtk_theme="TokyoNight-zk"
@@ -105,5 +105,5 @@ geany_theme="z0mbi3-TokyoNight"
 # - Slideshow (Change randomly every 15 minutes your wallpaper from Walls rice directory)
 ENGINE="CustomImage"
 CUSTOM_DIR="/path/to/dir"
-CUSTOM_WALL="/home/murphi/etc/Nextcloud-Linux/Personal/SSD/wallpaper/a_forest_of_trees_with_fog.jpg"
+CUSTOM_WALL="/home/murphi/ETC/Nextcloud-Linux/Personal/SSD/wallpapers/1.jpg"
 CUSTOM_ANIMATED="/home/z0mbi3/.config/bspwm/src/assets/animated_wall.mp4"

@@ -34,7 +34,7 @@ z0mbi3,echo z0mbi3 > ~/.config/bspwm/.rice ; ~/.config/bspwm/src/Theme.sh,colors
 ^tag(favorites)
 Editor,OpenApps --editor,standard-notes
 Neovim,OpenApps --nvim,nvim
-Brave,OpenApps --browser,brave
+Zen Browser,OpenApps --browser,zen-browser
 Retroarch,retroarch,retroarch
 
 ^tag(wg)

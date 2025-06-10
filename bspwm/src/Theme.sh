@@ -1,11 +1,19 @@
-#!/usr/bin/env bash
+#!/bin/sh
+# =============================================================
 #  ████████╗██╗  ██╗███████╗███╗   ███╗███████╗
-#  ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝		Author  :  gh0stzk
-#     ██║   ███████║█████╗  ██╔████╔██║█████╗		Url     :  https://github.com/gh0stzk/dotfiles
-#     ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝		Info    :  This file will configure and launch the rice.
-#     ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗		09.01.2025 08:56:34
+#  ╚══██╔══╝██║  ██║██╔════╝████╗ ████║██╔════╝
+#     ██║   ███████║█████╗  ██╔████╔██║█████╗
+#     ██║   ██╔══██║██╔══╝  ██║╚██╔╝██║██╔══╝
+#     ██║   ██║  ██║███████╗██║ ╚═╝ ██║███████╗
 #     ╚═╝   ╚═╝  ╚═╝╚══════╝╚═╝     ╚═╝╚══════╝
-#			Copyright (C) 2021-2025 gh0stzk <z0mbi3.zk@protonmail.com>
+# Author: gh0stzk
+# Repo:   https://github.com/gh0stzk/dotfiles
+# Date:   02.05.2025 07:37:41
+# Info:   This file will configure and launch the rice.
+#
+# Copyright (C) 2021-2025 gh0stzk <z0mbi3.zk@protonmail.com>
+# Licensed under GPL-3.0 license
+# =============================================================
 
 # Current Rice
 read -r RICE < "$HOME"/.config/bspwm/.rice
@@ -15,7 +23,7 @@ read -r RICE < "$HOME"/.config/bspwm/.rice
 
 # Function to wait for processes to finish correctly
 wait_for_termination() {
-    local process_name="$1"
+    process_name="$1"
     while pgrep -f "$process_name" >/dev/null; do
         sleep 0.2
     done
@@ -42,6 +50,11 @@ kill_processes() {
         pkill xwinwrap
         wait_for_termination "xwinwrap"
 	fi
+
+    if [ -f /tmp/wall_refresh.pid ]; then
+        kill $(cat /tmp/wall_refresh.pid) 2>/dev/null
+        rm -f /tmp/wall_refresh.pid
+    fi
 }
 
 # Set bspwm configuration
@@ -63,39 +76,8 @@ apply_term_config() {
 		-e "s/size = .*/size = $term_font_size/" \
 		-e "s/family = .*/family = \"$term_font_name\"/"
 
-	cat >"$HOME"/.config/alacritty/rice-colors.toml <<-EOF
-		# Default colors
-		[colors.primary]
-		background = "${bg}"
-		foreground = "${fg}"
-
-		# Cursor colors
-		[colors.cursor]
-		cursor = "${fg}"
-		text = "${bg}"
-
-		# Normal colors
-		[colors.normal]
-		black = "${black}"
-		red = "${red}"
-		green = "${green}"
-		yellow = "${yellow}"
-		blue = "${blue}"
-		magenta = "${magenta}"
-		cyan = "${cyan}"
-		white = "${white}"
-
-		# Bright colors
-		[colors.bright]
-		black = "${blackb}"
-		red = "${redb}"
-		green = "${greenb}"
-		yellow = "${yellowb}"
-		blue = "${blueb}"
-		magenta = "${magentab}"
-		cyan = "${cyanb}"
-		white = "${whiteb}"
-	EOF
+    sed -i "$HOME"/.config/alacritty/alacritty.toml \
+        -e "s|\"themes/.*\.toml\",|\"themes/${RICE}.toml\",|"
 
 	# Kitty
 	kitten themes --reload-in=all ${RICE}
@@ -234,11 +216,6 @@ apply_geany_theme(){
 
 # Apply wallpaper engine
 apply_wallpaper () {
-    if [[ -f /tmp/wall_refresh.pid ]]; then
-        kill $(cat /tmp/wall_refresh.pid) 2>/dev/null
-        rm -f /tmp/wall_refresh.pid
-    fi
-
 	case $ENGINE in
 		"Theme")
 			feh -z --no-fehbg --bg-fill "${HOME}"/.config/bspwm/rices/"${RICE}"/walls ;;

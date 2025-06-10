@@ -1,20 +1,9 @@
-#!/usr/bin/env bash
-#  ███████╗██╗  ██╗████████╗███████╗██████╗ ███╗   ██╗ █████╗ ██╗
-#  ██╔════╝╚██╗██╔╝╚══██╔══╝██╔════╝██╔══██╗████╗  ██║██╔══██╗██║
-#  █████╗   ╚███╔╝    ██║   █████╗  ██████╔╝██╔██╗ ██║███████║██║
-#  ██╔══╝   ██╔██╗    ██║   ██╔══╝  ██╔══██╗██║╚██╗██║██╔══██║██║
-#  ███████╗██╔╝ ██╗   ██║   ███████╗██║  ██║██║ ╚████║██║  ██║███████╗
-#  ╚══════╝╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝  ╚═╝╚══════╝
-#
-#              ██████╗ ██╗   ██╗██╗     ███████╗███████╗
-#              ██╔══██╗██║   ██║██║     ██╔════╝██╔════╝
-#              ██████╔╝██║   ██║██║     █████╗  ███████╗
-#              ██╔══██╗██║   ██║██║     ██╔══╝  ╚════██║
-#              ██║  ██║╚██████╔╝███████╗███████╗███████║
-#              ╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝╚══════╝
-#	[Author] : gh0stzk
-#	 [Url]   : https://github.com/gh0stzk/dotfiles
-#
+#!/bin/sh
+# =============================================================
+# gh0stzk
+# https://github.com/gh0stzk/dotfiles
+# 24.04.2025
+# =============================================================
 
 wid=$1
 class=$2
@@ -51,31 +40,44 @@ case "$class" in
     pavucontrol)
         result "state=floating center=on"
         ;;
-    firefox|Navigator)
-        result "desktop=^3 follow=on"
-        ;;
     ZapZap)
         result "desktop=^1 follow=on"
         ;;
-    vesktop)
-        result "desktop=^5 follow=on"
+    discord)
+        result "desktop=^1 follow=on"
+        ;;
+    notion-desktop)
+        result "desktop=^2 follow=on"
+        ;;
+    eu.betterbird.Betterbird)
+        result "desktop=^3 follow=on"
         ;;
     Spotify)
         result "desktop=^5 follow=on"
+        ;;
+    steam)
+        result "desktop=^5 follow=on"
+        ;;
+    zen|Navigator)
+        result "desktop=^6 follow=on"
+        ;;
+    Code)
+        result "desktop=^7 follow=on"
+        ;;
+    dbgate)
+        result "desktop=^8 follow=on"
         ;;
     zoom)
         if xprop -id "$wid" | grep -qE '_NET_WM_NAME\(UTF8_STRING\) = "zoom"|_NET_WM_NAME\(UTF8_STRING\) = "Settings"|_NET_WM_NAME\(UTF8_STRING\) = "Zoom Workplace - Free account"'; then
             result "state=floating"
         fi
         ;;
-    steam)
-        result "desktop=^5 follow=on"
-        ;;
-    eu.betterbird.Betterbird)
-        result "desktop=^2 follow=on"
-        ;;
-    notion-desktop)
-        result "desktop=^3 follow=on"
+    wpp)
+        if xprop -id "$wid" | grep -qE '_NET_WM_NAME\(UTF8_STRING\) = "WPS Presentation Slide Show'; then
+            result "desktop=^6 state=floating follow=on"
+        else
+            result "state=tiled"
+        fi
         ;;
 esac
 
