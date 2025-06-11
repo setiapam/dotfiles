@@ -86,6 +86,10 @@ run lxpolkit
 # Start one time message
 [ ! -f "$HOME/.config/bspwm/src/config/.first_run_done" ] && alacritty --hold -e sh -c 'cat "$HOME/.config/bspwm/src/config/FirstMessage.txt"; sleep 0.1' && touch "$HOME/.config/bspwm/src/config/.first_run_done"
 
+# Disable automatic turn off display
+xset -dpms
+xset s off
+
 pgrep -f zapzap >/dev/null || { zapzap & }
 pgrep -f notion-desktop >/dev/null || { notion-desktop & }
 pgrep -f betterbird >/dev/null || { betterbird & }
