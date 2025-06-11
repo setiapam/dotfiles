@@ -90,6 +90,9 @@ run lxpolkit
 xset -dpms
 xset s off
 
+# Gesture
+libinput-gestures
+
 pgrep -f zapzap >/dev/null || { zapzap & }
 pgrep -f notion-desktop >/dev/null || { notion-desktop & }
 pgrep -f betterbird >/dev/null || { betterbird & }
