@@ -40,6 +40,9 @@ case "$class" in
     pavucontrol)
         result "state=floating center=on"
         ;;
+    feh)
+        result "state=floating"
+        ;;
     ZapZap)
         result "desktop=^1 follow=on"
         ;;
@@ -58,9 +61,6 @@ case "$class" in
     steam)
         result "desktop=^5 follow=on"
         ;;
-    zen|Navigator)
-        result "desktop=^6 follow=on"
-        ;;
     Code)
         result "desktop=^7 follow=on"
         ;;
@@ -68,7 +68,7 @@ case "$class" in
         result "desktop=^8 follow=on"
         ;;
     zoom)
-        if xprop -id "$wid" | grep -qE '_NET_WM_NAME\(UTF8_STRING\) = "zoom"|_NET_WM_NAME\(UTF8_STRING\) = "Settings"|_NET_WM_NAME\(UTF8_STRING\) = "Zoom Workplace - Free account"'; then
+        if xprop -id "$wid" | grep -qE '_NET_WM_NAME\(UTF8_STRING\) = "zoom"| _NET_WM_NAME\(UTF8_STRING\) = "Settings"| _NET_WM_NAME\(UTF8_STRING\) = "Zoom Workplace - Free account" | _NET_WM_NAME\(UTF8_STRING\) = "zoom_linux_float_video_window"'; then
             result "state=floating"
         fi
         ;;

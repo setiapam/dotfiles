@@ -98,5 +98,10 @@ pgrep -f notion-desktop >/dev/null || { notion-desktop & }
 pgrep -f betterbird >/dev/null || { betterbird & }
 pgrep -f discord >/dev/null || { discord & }
 pgrep -f nextcloud >/dev/null || { nextcloud & }
-pgrep -f OneDriveGUI >/dev/null || { OneDriveGUI & }
+# pgrep -f OneDriveGUI >/dev/null || { OneDriveGUI & }
 # pgrep -f steam >/dev/null || { steam & }
+pgrep -f OneDriveGUI >/dev/null || { python3 "$HOME/OneDriveGUI/src/OneDriveGUI.py" > /dev/null 2>&1 & }
+
+# Rules
+bspc rule -a 'obs:*:Projector - Program' desktop=^6 state=floating follow=on
+bspc rule -a dota2 desktop=^9 follow=on
