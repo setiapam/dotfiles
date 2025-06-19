@@ -30,7 +30,7 @@ MonitorSetup
 
 bspc config external_rules_command "${HOME}"/.config/bspwm/src/ExternalRules
 
-bspc config window_gap                5
+bspc config window_gap 5
 bspc config split_ratio               0.53
 bspc config single_monocle            true
 
@@ -105,3 +105,4 @@ pgrep -f OneDriveGUI >/dev/null || { python3 "$HOME/OneDriveGUI/src/OneDriveGUI.
 # Rules
 bspc rule -a 'obs:*:Projector - Program' desktop=^6 state=floating follow=on
 bspc rule -a dota2 desktop=^9 follow=on
+bspc rule -a zoom state=floating

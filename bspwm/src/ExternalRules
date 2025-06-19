@@ -67,11 +67,6 @@ case "$class" in
     dbgate)
         result "desktop=^8 follow=on"
         ;;
-    zoom)
-        if xprop -id "$wid" | grep -qE '_NET_WM_NAME\(UTF8_STRING\) = "zoom"| _NET_WM_NAME\(UTF8_STRING\) = "Settings"| _NET_WM_NAME\(UTF8_STRING\) = "Zoom Workplace - Free account" | _NET_WM_NAME\(UTF8_STRING\) = "zoom_linux_float_video_window"'; then
-            result "state=floating"
-        fi
-        ;;
     wpp)
         if xprop -id "$wid" | grep -qE '_NET_WM_NAME\(UTF8_STRING\) = "WPS Presentation Slide Show'; then
             result "desktop=^6 state=floating follow=on"
