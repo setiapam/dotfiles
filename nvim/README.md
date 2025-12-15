@@ -66,7 +66,6 @@ Extras from NvChad 2:
 - [MeanderingProgrammer/render-markdown.nvim](https://github.com/MeanderingProgrammer/render-markdown.nvim): Render markdown in neovim
 - [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi): Vim multi-cursor (`Ctrl-n`)
 - [nvim-scrollbar](https://github.com/petertriho/nvim-scrollbar): Scrollbar with git & LSP signs
-- [obsidian-nvim/obsidian.nvim](https://github.com/obsidian-nvim/obsidian.nvim): Manage Obsidian notes
 - [sindrets/diffview.nvim](https://github.com/sindrets/diffview.nvim): Git diff viewer
 - [tpope/vim-surround](https://github.com/tpope/vim-surround): Brackets and tags generators (vmode: `S)`, nmode: `ysiw)`, `cs"'` )
 - [davidmh/mdx.nvim](https://github.com/davidmh/mdx.nvim): MDX support
@@ -76,7 +75,7 @@ Extras from NvChad 2:
 
 ## Mappings
 
-I've changed a bunch of NvChad default mappings for better actions grouping, for e.g: `<leader>l` for LSP, `<leader>f` for Telescope commands, `<leader>o` for Obsidian...
+I've changed a bunch of NvChad default mappings for better actions grouping, for e.g: `<leader>l` for LSP, `<leader>f` for Telescope commands...
 
 In addition, I've added some frequently used text objects and shortcuts:
 

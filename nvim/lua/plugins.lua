@@ -55,11 +55,6 @@ local plugins = {
       words = { enabled = false },
       image = {
         enabled = true,
-        resolve = function(path, src)
-          if require("obsidian.api").path_is_note(path) then
-            return require("obsidian.api").resolve_image_path(src)
-          end
-        end,
       },
     },
     keys = {
@@ -329,23 +324,6 @@ local plugins = {
       { "R", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
       { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
     },
-  },
-  {
-    "obsidian-nvim/obsidian.nvim",
-    version = "*", -- recommended, use latest release instead of latest commit
-
-    event = {
-      "BufReadPre " .. vim.fn.expand "~" .. "/Sync/wiki/**.md",
-      "BufNewFile " .. vim.fn.expand "~" .. "/Sync/wiki/**.md",
-    },
-    dependencies = {
-      -- Required.
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim",
-      "hrsh7th/nvim-cmp",
-    },
-    keys = require("mappings").obsidian,
-    opts = require "configs.obsidian",
   },
   {
     "yetone/avante.nvim",

@@ -27,3 +27,4 @@ opt.scrolloff = 5
 opt.laststatus = 3
 -- default winborder
 opt.winborder = "rounded"
+opt.relativenumber = true

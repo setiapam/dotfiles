@@ -215,7 +215,6 @@ M.rendermarkdown = {
       -- Highlight for the checked icon.
       highlight = "RenderMarkdownSuccess",
     },
-    -- Define custom checkbox states, common in Obsidian
     custom = {
       todo = { raw = "[-]", rendered = "󰍵 ", highlight = "RenderMarkdownError", scope_highlight = nil },
       in_progress = { raw = "[/]", rendered = "󰪞 ", highlight = "RenderMarkdownWarn", scope_highlight = nil },
