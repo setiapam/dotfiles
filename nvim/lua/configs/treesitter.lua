@@ -24,6 +24,7 @@ local treesitterconfig = {
     "vue",
     "twig", -- for twig and nunjucks templates
     "html",
+    "blade",
     -- "mermaid"
   },
   -- ignore_install = { "markdown" },
