@@ -79,7 +79,6 @@ local plugins = {
     "saghen/blink.cmp",
     enabled = true,
     dependencies = {
-      -- "Kaiser-Yang/blink-cmp-avante",
       "rafamadriz/friendly-snippets",
     },
     opts = {
@@ -93,14 +92,8 @@ local plugins = {
         list = { selection = { preselect = false, auto_insert = true } },
       },
       sources = {
-        -- Add 'avante' to the list
         default = { "lsp", "path", "snippets", "buffer" },
-        providers = {
-          -- avante = {
-          --   module = "blink-cmp-avante",
-          --   name = "Avante",
-          -- },
-        },
+        providers = {},
       },
     },
   },
@@ -287,30 +280,6 @@ local plugins = {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {}, -- must provide empty opts to enable lazy loading
   },
-  -- {
-  --   "zbirenbaum/copilot.lua",
-  --   -- lazy = false,
-  --   cmd = "Copilot",
-  --   event = "InsertEnter",
-  --   opts = {
-  --     copilot_node_command = "/opt/homebrew/bin/node",
-  --     suggestion = {
-  --       enabled = true,
-  --       auto_trigger = true,
-  --       hide_during_completion = true,
-  --       debounce = 200,
-  --       trigger_on_accept = true,
-  --       keymap = {
-  --         accept = "<M-space>",
-  --         accept_word = "<M-right>",
-  --         accept_line = false,
-  --         next = "<M-]>",
-  --         prev = "<M-[>",
-  --         dismiss = "<C-]>",
-  --       },
-  --     },
-  --   },
-  -- },
   {
     "folke/flash.nvim",
     event = "VeryLazy",
@@ -326,47 +295,10 @@ local plugins = {
     },
   },
   {
-    "yetone/avante.nvim",
-    enabled = false,
-    event = "VeryLazy",
-    version = false, -- set this if you want to always pull the latest change
-    opts = require "configs.avante",
-    keys = require("mappings").avante,
-    -- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
-    build = "make",
-    -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false" -- for windows
-    dependencies = {
-      -- "stevearc/dressing.nvim",
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      --- The below dependencies are optional,
-      "hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
-      "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-      "nvim-telescope/telescope.nvim",
-      -- "zbirenbaum/copilot.lua", -- for providers='copilot'
-      {
-        "ravitemer/mcphub.nvim",
-        dependencies = {
-          "nvim-lua/plenary.nvim", -- Required for Job and HTTP requests
-        },
-        -- uncomment the following line to load hub lazily
-        --cmd = "MCPHub",  -- lazy load
-        -- build = "npm install -g mcp-hub@latest", -- Installs required mcp-hub npm module
-        -- uncomment this if you don't want mcp-hub to be available globally or can't use -g
-        build = "bundled_build.lua", -- Use this and set use_bundled_binary = true in opts  (see Advanced configuration)
-        opts = {
-          use_bundled_binary = true,
-          -- for use with Avante
-          auto_approve = true,
-        },
-      },
-    },
-  },
-  {
     ---@module 'render-markdown'
     -- Make sure to set this up properly if you have lazy=true
     "MeanderingProgrammer/render-markdown.nvim",
-    ft = { "markdown", "Avante" },
+    ft = { "markdown" },
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
     opts = overrides.rendermarkdown,
   },

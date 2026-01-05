@@ -33,34 +33,12 @@ local git_add = function()
   api.tree.reload()
 end
 
-local avante_add_file = function()
-  local api = require "nvim-tree.api"
-  local node = api.tree.get_node_under_cursor()
-  local relative_path = require("avante.utils").relative_path(node.absolute_path)
-
-  local sidebar = require("avante").get()
-
-  local open = sidebar:is_open()
-  -- ensure avante sidebar is open
-  if not open then
-    require("avante.api").ask()
-    sidebar = require("avante").get()
-  end
-
-  sidebar.file_selector:add_selected_file(relative_path)
-
-  -- remove neo tree buffer
-  if not open then
-    sidebar.file_selector:remove_selected_file "nvim-tree filesystem [1]"
-  end
-end
-
 local on_nvimtree_attach = function(bufnr)
   local api = require "nvim-tree.api"
   -- default mappings
   api.config.mappings.default_on_attach(bufnr)
   -- custom mappings centralized in mappings.lua
-  require("mappings").nvimtree(bufnr, api, { git_add = git_add, avante_add_file = avante_add_file })
+  require("mappings").nvimtree(bufnr, api, { git_add = git_add })
 end
 -- git support in nvimtree
 local options = {

@@ -85,7 +85,6 @@ lazy.nvimtree = function(bufnr, api, cmds)
   map("n", "<leader>e", "<C-w>w", opts "Focus editor")
   map("n", "?", api.tree.toggle_help, opts "Help")
   map("n", "ga", cmds.git_add, opts "Git add current file")
-  map("n", "A", cmds.avante_add_file, opts "Avante add current file")
 end
 
 -- Telescope mappings
@@ -221,7 +220,7 @@ lazy.cheatsheet = function(args)
 end
 
 -- CtrlSF mappings
-map("n", "<C-S-f>", "<ESC>:CtrlSF ", { desc = "ctrlsf Begin find in files" })
+map("n", "<C-S-f>", "<ESC>:CtrlSF", { desc = "ctrlsf Begin find in files" })
 map("v", "<C-S-f>", 'y<ESC>:CtrlSF <c-r>"', { desc = "ctrlsf Find selection in files" })
 map("n", "<leader>tf", "<cmd> CtrlSFToggle <CR>", { desc = "ctrlsf Toggle CtrlSF Window" })
 
@@ -245,39 +244,7 @@ lazy.gitsigns = function(bufnr, gitsigns)
   map("n", "<leader>gb", gitsigns.blame_line, { buffer = bufnr, desc = "git Blame Line" })
 end
 
--- Copilot mappings
--- lazy.copilot = function()
---   map("i", "<M-Space>", function()
---     vim.fn.feedkeys(vim.fn["copilot#Accept"](), "")
---   end, { desc = "copilot Accept", replace_keycodes = false, nowait = true, silent = true, expr = true, noremap = true })
--- end
-
 -- Wiki mappings
-lazy.avante = {
-  {
-    "<C-M-a>",
-    function()
-      local avante = require "avante"
-      local sidebar = avante.get()
-      local curbuf = vim.api.nvim_get_current_buf()
-      if not sidebar then
-        return
-      end
-      --
-      if
-        sidebar:is_open() and (curbuf == sidebar.containers.input.bufnr or curbuf == sidebar.containers.result.bufnr)
-      then
-        -- input in sidebar
-        avante.close_sidebar()
-      else
-        -- input in editor buffer
-        vim.cmd "AvanteAsk"
-      end
-    end,
-    mode = { "n", "i" },
-    desc = "avante: Toggle or Focus",
-  },
-}
 
 lazy.sidekick = {
   {

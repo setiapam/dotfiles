@@ -71,7 +71,6 @@ Extras from NvChad 2:
 - [davidmh/mdx.nvim](https://github.com/davidmh/mdx.nvim): MDX support
 - [varnishcache-friends/vim-varnish](https://github.com/varnishcache-friends/vim-varnish): VCL syntax support
 - [windwp/nvim-ts-autotag](https://github.com/windwp/nvim-ts-autotag): Auto tags & brackets closing using treesitter
-- [zbirenbaum/copilot.lua](https://github.com/zbirenbaum/copilot.lua): You know what
 
 ## Mappings
 

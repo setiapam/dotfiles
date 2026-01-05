@@ -171,7 +171,7 @@ M.scrollbar = {
 ---@module 'render-markdown'
 ---@type render.md.UserConfig
 M.rendermarkdown = {
-  file_types = { "markdown", "Avante" },
+  file_types = { "markdown" },
   completions = { lsp = { enabled = true } },
   code = {
     enabled = true,
