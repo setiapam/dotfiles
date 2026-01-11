@@ -119,7 +119,7 @@ lazy.lspconfig = function(client, bufnr)
     vim.diagnostic.open_float { border = "rounded" }
   end, opts "diagnostic")
   map("n", "<leader>lf", function()
-    vim.lsp.buf.format { async = true }
+    require("conform").format { lsp_fallback = true, timeout_ms = 5000 }
   end, opts "format")
   map("n", "<leader>ll", function()
     vim.diagnostic.setloclist()
