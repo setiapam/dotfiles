@@ -24,7 +24,7 @@ local options = {
     go = { "gofmt" },
 
     python = { "black" }, -- cannot use tabs, consider another formatter
-    php = { "pretty-php" },
+    php = { "intelephense" },
   },
 
   format_on_save = function(bufnr)

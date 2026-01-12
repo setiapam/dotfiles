@@ -28,6 +28,7 @@ local servers = {
   "vue-language-server",
   "prisma-language-server",
   "laravel-ls",
+  "intelephense",
   -- "custom_elements_ls",
   -- "tailwindcss",
 }
