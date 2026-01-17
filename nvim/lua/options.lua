@@ -10,9 +10,7 @@ opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25-blinkon300-blinkoff200,r-cr-o:hor2
 opt.exrc = true
 
 -- indent and whitespaces
-opt.tabstop = 2
-opt.shiftwidth = 2
-opt.expandtab = true -- use spaces by default, to be overriden by .editorconfig
+opt.expandtab = true -- use tabs by default, to be overriden by .editorconfig
 opt.listchars = "tab:‣ ,trail:~,extends:›,precedes:‹" -- space:·
 opt.list = true
 -- lines and wrap
@@ -25,5 +23,8 @@ opt.clipboard = ""
 opt.fixeol = true
 -- scroll offset
 opt.scrolloff = 5
+-- for avante plugin: views can only be fully collapsed with the global statusline
+-- opt.laststatus = 3
 -- default winborder
 opt.winborder = "rounded"
+opt.relativenumber = true
