@@ -187,6 +187,9 @@ overview {
 // See the binds section below for more spawn examples.
 // This line starts waybar, a commonly used bar for Wayland compositors.
 // spawn-at-startup "sh" "-c" "sleep 5 && OneDriveGUI"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "adw-gtk3-dark"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "color-scheme" "prefer-dark"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "cursor-theme" "default"
 environment {
   XDG_CURRENT_DESKTOP "niri"
 }
