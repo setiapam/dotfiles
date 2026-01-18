@@ -4,6 +4,9 @@ binds {
     Super+Alt+C { spawn "dms" "color" "pick" "-a"; }
     Super+Alt+L hotkey-overlay-title="Lock Screen" { spawn "dms" "ipc" "call" "lock" "lock"; }
     Super+Alt+V hotkey-overlay-title="Clipboard: Toggle" { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
+    Super+D hotkey-overlay-title="Dashboard: Toggle" { spawn "dms" "ipc" "call" "dash" "toggle" ""; }
+    Super+M hotkey-overlay-title="Dashboard: Media" { spawn "dms" "ipc" "call" "dash" "open" "media"; }
+    Super+Y hotkey-overlay-title="Wallpaper Browser" { spawn "dms" "ipc" "call" "dankdash" "wallpaper"; }
     Mod+W { spawn "vivaldi"; }
     Super+E { spawn "dolphin"; }
 }
