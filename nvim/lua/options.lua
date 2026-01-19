@@ -11,6 +11,8 @@ opt.exrc = true
 
 -- indent and whitespaces
 opt.expandtab = true -- use tabs by default, to be overriden by .editorconfig
+opt.shiftwidth = 4
+opt.tabstop = 4
 opt.listchars = "tab:‣ ,trail:~,extends:›,precedes:‹" -- space:·
 opt.list = true
 -- lines and wrap
