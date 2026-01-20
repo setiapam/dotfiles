@@ -8,6 +8,8 @@ binds {
     Super+D hotkey-overlay-title="Dashboard: Toggle" { spawn "dms" "ipc" "call" "dash" "toggle" ""; }
     Super+M hotkey-overlay-title="Dashboard: Media" { spawn "dms" "ipc" "call" "dash" "open" "media"; }
     Super+Y hotkey-overlay-title="Wallpaper Browser" { spawn "dms" "ipc" "call" "dankdash" "wallpaper"; }
-    Mod+W { spawn "vivaldi"; }
+    Super+Alt+S { screenshot-window; }
+    Super+Ctrl+S { screenshot-screen; }
+    Mod+W { spawn "zen-browser"; }
     Super+E { spawn "dolphin"; }
 }
