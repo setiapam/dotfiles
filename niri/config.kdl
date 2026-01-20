@@ -190,6 +190,7 @@ overview {
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "gtk-theme" "adw-gtk3-dark"
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "color-scheme" "prefer-dark"
 spawn-at-startup "gsettings" "set" "org.gnome.desktop.interface" "cursor-theme" "default"
+spawn-at-startup "gsettings" "set" "org.gnome.desktop.wm.preferences" "button-layout" "':'"
 environment {
   XDG_CURRENT_DESKTOP "niri"
 }
