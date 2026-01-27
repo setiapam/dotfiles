@@ -90,6 +90,7 @@ end
 -- Telescope mappings
 map("n", "<C-S-p>", "<cmd> Telescope commands <CR>", { desc = "Telescope Open commands panel" })
 map("n", "<C-p>", "<cmd> Telescope find_files hidden=true <CR>", { desc = "Telescope Find files" })
+map("n", "<leader>ff", "<cmd> Telescope find_files hidden=true no_ignore=true<CR>", { desc = "Telescope Find files" })
 map("n", "<C-f>", "<cmd> Telescope current_buffer_fuzzy_find <CR>", { desc = "Telescope Find in current buffer" })
 map("n", "<C-t>", "<cmd> Telescope treesitter <CR>", { desc = "Telescope Find symbols" })
 map("n", "<leader>gc", "<cmd> Telescope git_commits <CR>", { desc = "Telescope Git čommits" })
