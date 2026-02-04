@@ -25,12 +25,11 @@ local servers = {
   "svelte",
   "pyright",
   "intelephense",
-  "vue-language-server",
+  "volar",
   "prisma-language-server",
   "laravel-ls",
-  "intelephense",
+  "tailwindcss",
   -- "custom_elements_ls",
-  -- "tailwindcss",
 }
 
 for _, lsp in ipairs(servers) do
@@ -41,6 +40,25 @@ for _, lsp in ipairs(servers) do
   })
   vim.lsp.enable(lsp)
 end
+
+-- ts and vue
+local vue_plugin_path = vim.fn.stdpath "data" .. "/mason/packages/vue-language-server/node_modules/@vue/language-server"
+vim.lsp.config("ts_ls", {
+  on_attach = on_attach,
+  on_init = on_init,
+  capabilities = capabilities,
+  init_options = {
+    plugins = {
+      {
+        name = "@vue/typescript-plugin",
+        location = vue_plugin_path,
+        languages = { "vue" },
+      },
+    },
+  },
+  filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+})
+vim.lsp.enable "ts_ls"
 
 -- tailwindcss
 vim.lsp.config("tailwindcss", {
