@@ -1,0 +1,117 @@
+{
+    "$schema": "https://opencode.ai/theme.json",
+    "defs": {
+        "osaka-bg": "#001219",
+        "osaka-bg-panel": "#001a23",
+        "osaka-bg-element": "#0a2e36",
+        "osaka-border": "#1a3f49",
+        "osaka-fg": "#e9ecef",
+        "osaka-fg-muted": "#94a3b8",
+        "osaka-yellow": "#ee9b00",
+        "osaka-orange": "#ca6702",
+        "osaka-red": "#ae2012",
+        "osaka-magenta": "#9b2226",
+        "osaka-violet": "#4361ee",
+        "osaka-blue": "#005f73",
+        "osaka-cyan": "#0a9396",
+        "osaka-green": "#94d2bd"
+    },
+    "theme": {
+        "primary": {
+            "dark": "osaka-cyan",
+            "light": "osaka-blue"
+        },
+        "secondary": {
+            "dark": "osaka-blue",
+            "light": "osaka-cyan"
+        },
+        "accent": {
+            "dark": "osaka-yellow",
+            "light": "osaka-orange"
+        },
+        "error": {
+            "dark": "osaka-magenta",
+            "light": "osaka-red"
+        },
+        "warning": {
+            "dark": "osaka-orange",
+            "light": "osaka-yellow"
+        },
+        "success": {
+            "dark": "osaka-green",
+            "light": "osaka-green"
+        },
+        "info": {
+            "dark": "osaka-cyan",
+            "light": "osaka-blue"
+        },
+        "text": {
+            "dark": "osaka-fg",
+            "light": "osaka-bg"
+        },
+        "textMuted": {
+            "dark": "osaka-fg-muted",
+            "light": "osaka-bg-element"
+        },
+        "background": {
+            "dark": "osaka-bg",
+            "light": "#f8f9fa"
+        },
+        "backgroundPanel": {
+            "dark": "osaka-bg-panel",
+            "light": "#e9ecef"
+        },
+        "backgroundElement": {
+            "dark": "osaka-bg-element",
+            "light": "#dee2e6"
+        },
+        "border": {
+            "dark": "osaka-border",
+            "light": "#ced4da"
+        },
+        "borderActive": {
+            "dark": "osaka-cyan",
+            "light": "osaka-blue"
+        },
+        "borderSubtle": {
+            "dark": "osaka-bg-element",
+            "light": "#adb5bd"
+        },
+        "diffAdded": {
+            "dark": "osaka-green",
+            "light": "osaka-green"
+        },
+        "diffRemoved": {
+            "dark": "osaka-red",
+            "light": "osaka-red"
+        },
+        "syntaxComment": {
+            "dark": "#52796f",
+            "light": "#52796f"
+        },
+        "syntaxKeyword": {
+            "dark": "osaka-magenta",
+            "light": "osaka-red"
+        },
+        "syntaxFunction": {
+            "dark": "osaka-blue",
+            "light": "osaka-blue"
+        },
+        "syntaxVariable": {
+            "dark": "osaka-cyan",
+            "light": "osaka-cyan"
+        },
+        "syntaxString": {
+            "dark": "osaka-green",
+            "light": "osaka-green"
+        },
+        "syntaxNumber": {
+            "dark": "osaka-orange",
+            "light": "osaka-orange"
+        },
+        "markdownHeading": {
+            "dark": "osaka-yellow",
+            "light": "osaka-orange"
+        }
+    }
+}
