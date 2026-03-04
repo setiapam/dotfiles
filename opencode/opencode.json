@@ -6,7 +6,7 @@
     "provider": {
         "google": {
             "options": {
-                "projectId": "striped-proxy-365901"
+                "projectId": "xxx"
             }
         }
     }
