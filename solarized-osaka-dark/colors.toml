@@ -1,0 +1,44 @@
+# Solarized Osaka Dark — Omarchy Theme
+# Based on craftzdog/solarized-osaka.nvim
+# Deeper variant: background anchored at #000c10, accent cyan #29a298
+
+accent               = "#29a298"   # cyan500 — primary accent
+cursor               = "#adb7b7"   # base1 — bright cursor, easy to spot
+foreground           = "#9eabac"   # base0 — primary text
+background           = "#000c10"   # base04 — near-black background
+selection_foreground = "#fdf5e2"   # base3 — bright text on selection
+selection_background = "#103a3c"   # cyan900 — deep teal selection
+
+# ── ANSI Colors ─────────────────────────────────────────────────────────────
+
+# Black (normal + bright)
+color0  = "#001419"   # base04 surface — dark panel / inactive bg
+color8  = "#002c38"   # base03 — slightly lighter dark
+
+# Red (normal + bright)
+color1  = "#db302d"   # red500 — error, deletion
+color9  = "#e85553"   # red300 — bright red, urgent highlights
+
+# Green (normal + bright)
+color2  = "#849900"   # green500 — success, strings
+color10 = "#b8cc52"   # green300 — bright green, active output
+
+# Yellow (normal + bright)
+color3  = "#b28500"   # yellow500 — warning, variables
+color11 = "#e3b714"   # yellow300 — bright yellow, search highlight
+
+# Blue (normal + bright)
+color4  = "#268bd3"   # blue500 — links, secondary accent
+color12 = "#5eaaf5"   # blue300 — bright blue, directory listing
+
+# Magenta (normal + bright)
+color5  = "#d23681"   # magenta500 — special syntax
+color13 = "#e06faa"   # magenta300 — bright magenta
+
+# Cyan (normal + bright)
+color6  = "#29a298"   # cyan500 — primary accent, headings
+color14 = "#2aeddd"   # cyan300 — bright cyan, active selections
+
+# White (normal + bright)
+color7  = "#576d74"   # base01 — muted text, comments
+color15 = "#adb7b7"   # base1 — bright foreground, emphasis
