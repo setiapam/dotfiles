@@ -1,0 +1,1 @@
+/home/murphi/.config/omarchy/current/theme/neovim.lua
